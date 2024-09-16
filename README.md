@@ -36,7 +36,7 @@ cd build
 
 <img src="./fig/result1.jpg" style="zoom:70%;" />
 
-<img src="./fig/result2.jpg" style="zoom:60%;" />
+<img src="./fig/result2.jpg" style="zoom:50%;" />
 
 ## Ref.
 
