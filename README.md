@@ -2,21 +2,31 @@
 
 ## What is Trinity?
 
-Trinity 用于提取网络数据包元数据，目前可以解析的协议包括：运输层协议（TCP、UDP），网际层协议（IPv4、IPv6、ICMP、IGMP）。可实现 **输入无关（Input Agnostic）**的包元数据提取。
+Trinity 用于提取网络数据包元数据，目前可以解析的协议包括：运输层协议（TCP、UDP），网际层协议（IPv4、IPv6、ICMP、IGMP）。可实现**输入无关（Input Agnostic）**的包元数据提取。
 
 ## Building Trinity
 
+### 软件准备
+
+0. __安装编译工具链.__	
+
+​	Trinity 在 WSL2 Ubuntu 20.04 下完成编译。编译使用的工具有`cmake`+`ninja`+`g++`，使用`apt install`安装正确的编译工具链。
+
+1. __安装LibPcap++.__
+
+​	Trinity 使用 PcapPlusPlus 完成网络包的剖析。[LibPcap++安装](https://github.com/seladb/PcapPlusPlus/releases/download/v23.09/pcapplusplus-23.09-ubuntu-20.04-gcc-9.4.0-x86_64.tar.gz)。
+
+​	目录env下给出shell脚本`install_pcap.sh`用于简化安装过程。
+
+### 编译
+
 ```bash
-sudo apt install cmake ninja-build
-
-cd Trinity/
-
-cd ./env/
-
-./install_pcap.sh
-
 ./init.sh
+```
 
+### 运行
+
+```bash
 cd build
 
 ./Trinity -config ../configuration/network_traffic.json
