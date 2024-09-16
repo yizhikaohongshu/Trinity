@@ -6,7 +6,7 @@ Trinity 用于提取网络数据包元数据，目前可以解析的协议包括
 
 ## Building Trinity
 
-### 软件准备
+### 0. 软件准备
 
 0. __安装编译工具链.__	
 
@@ -18,19 +18,25 @@ Trinity 用于提取网络数据包元数据，目前可以解析的协议包括
 
 ​	目录env下给出shell脚本`install_pcap.sh`用于简化安装过程。
 
-### 编译
+### 1. 编译
 
 ```bash
 ./init.sh
 ```
 
-### 运行
+### 2. 运行
 
 ```bash
 cd build
 
 ./Trinity -config ../configuration/network_traffic.json
 ```
+
+### 3. 结果
+
+<img src="./fig/result1.jpg" style="zoom:70%;" />
+
+<img src="./fig/result2.jpg" style="zoom:60%;" />
 
 ## Ref.
 
