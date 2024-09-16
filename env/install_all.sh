@@ -2,8 +2,8 @@
 
 set -eux
 
-apt install update
-apt install upgrade -y
+apt update
+apt upgrade -y
 apt install cmake ninja-build libpcap-dev unzip -y
 
 BASE_NAME=$(basename $(pwd))
