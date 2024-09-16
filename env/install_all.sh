@@ -4,6 +4,7 @@ set -eux
 
 apt update
 apt upgrade -y
+apt install build-essential -y
 apt install cmake ninja-build libpcap-dev unzip -y
 
 BASE_NAME=$(basename $(pwd))
@@ -25,4 +26,4 @@ apt install libgflags-dev -y
 
 cd env
 chmod +x install_pcap.sh
-./install_pcap
+./install_pcap.sh

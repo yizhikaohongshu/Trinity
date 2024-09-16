@@ -15,8 +15,10 @@ Trinity 用于提取网络数据包元数据，目前可以解析的协议包括
 1. __安装LibPcap++.__
 
 ​	Trinity 使用 PcapPlusPlus 完成网络包的剖析。[LibPcap++安装](https://github.com/seladb/PcapPlusPlus/releases/download/v23.09/pcapplusplus-23.09-ubuntu-20.04-gcc-9.4.0-x86_64.tar.gz)。
-
-​	目录env下给出shell脚本`install_pcap.sh`用于简化安装过程。
+   简化安装：
+   ```bash
+   ./env/install_all.sh
+   ```
 
 ### 1. 编译
 
