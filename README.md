@@ -2,7 +2,7 @@
 
 ## What is Trinity?
 
-Trinity 用于提取网络数据包元数据，目前可以解析的协议包括：运输层协议（TCP、UDP），网际层协议（IPv4、IPv6、ICMP、IGMP）。可实现**输入无关（Input Agnostic）**的包元数据提取。
+Trinity 用于提取网络数据包元数据，目前可以解析的协议包括：运输层协议（TCP、UDP），网际层协议（IPv4、IPv6、ICMP、IGMP）。可实现__输入无关(Input Agnostic)__的包元数据提取。
 
 ## Building Trinity
 
@@ -30,5 +30,13 @@ Trinity 用于提取网络数据包元数据，目前可以解析的协议包括
 cd build
 
 ./Trinity -config ../configuration/network_traffic.json
+```
+
+## Ref.
+
+```
+C.Fu, Q. Li, M. Shen, and K. Xu. Realtime robust malicious traffic detection via frequency demain analysis, in Proc. ACM SIGSAC Conf. on Comput. Commun. Secur., pp. 3432-3446, 2021.
+
+C. Fu, Q. Li, and K. Xu, Detecting unknown encrypted malicious traffic in real time via flow interaction graph analysis, in Proc. Netw. Distrib. Syst. Secur. Symp., pp. 1-18, 2023.
 ```
 
