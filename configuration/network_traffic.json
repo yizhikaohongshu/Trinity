@@ -1,0 +1,9 @@
+{
+    "packet_parse": {
+        "target_file_path": "../data/IDS2017.pcap"
+    },
+    "result_save": {
+        "save_result_enable": true,
+        "save_result_path": "../temp/output.txt"
+    }
+}
