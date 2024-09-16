@@ -14,7 +14,7 @@ echo "Installing Libpcap++."
 BASE_NAME=$(basename $(pwd))
 
 if [ $BASE_NAME != "env" ]; then
-    echo "This script should be executed in the env dir."
+    echo "This script should be executed in the root dir of Trinity."
     exit -1
 fi
 
