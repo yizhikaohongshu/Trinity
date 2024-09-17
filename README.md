@@ -48,7 +48,7 @@ $ ./init.sh
 }
 ```
 
-target_file_path和save_result_path分别表示输入文件与输出文件。
+其中，target_file_path 和 save_result_path 分别表示输入文件与输出文件。
 
 ### 1. 运行
 
