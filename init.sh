@@ -9,7 +9,7 @@ if [ $BASE_NAME != "Trinity" ] && [ $BASE_NAME != "trinity" ]; then
     exit -1
 fi
 
-chmod +x ./srcipt/rebuild.sh
+chmod +x ./script/rebuild.sh
 ./script/rebuild.sh
 
 echo "Done."
