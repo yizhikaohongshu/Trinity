@@ -59,30 +59,10 @@ inline auto test_pkt_type_code(const pkt_code_t cd, const pkt_type_t t) -> bool 
     return cd & (1 << t);
 }
 
-// using tuple2_conn4 = tuple<pkt_addr4_t, pkt_addr4_t>;
-// using tuple2_conn6 = tuple<pkt_addr6_t, pkt_addr6_t>;
+
 using tuple4_conn4 = tuple<pkt_addr4_t, pkt_addr4_t, pkt_port_t, pkt_port_t>;
 using tuple4_conn6 = tuple<pkt_addr6_t, pkt_addr6_t, pkt_port_t, pkt_port_t>;
 
-// inline auto tuple_get_src_addr(const tuple2_conn4& cn) -> pkt_addr4_t {
-//     return get<0>(cn);
-// }
-
-inline auto tuple_get_src_addr(const tuple4_conn4& cn) -> pkt_addr4_t {
-    return get<0>(cn);
-}
-
-inline auto tuple_get_dst_addr(const tuple4_conn4& cn) -> pkt_addr4_t {
-    return get<1>(cn);
-}
-
-inline auto tuple_get_src_port(const tuple4_conn4& cn) -> pkt_port_t {
-    return get<2>(cn);
-}
-
-inline auto tuple_get_dst_port(const tuple4_conn4& cn) -> pkt_port_t {
-    return get<3>(cn);
-}
 
 inline auto get_str_addr(const pkt_addr6_t ad) -> string {
     __pkt_addr6 __t;
@@ -90,28 +70,25 @@ inline auto get_str_addr(const pkt_addr6_t ad) -> string {
     return pcpp::IPv6Address(__t.byte_rep).toString();
 }
 
-// todo
-// IPv6
-inline auto tuple_get_src_addr(const tuple4_conn6& cn) -> pkt_addr6_t { 
-    return get<0>(cn);
+template<typename TupleType>
+auto tuple_get_src_addr(const TupleType& tup) -> decltype(get<0>(tup)) {
+    return get<0>(tup);
 }
 
-inline auto tuple_get_dst_addr(const tuple4_conn6& cn) -> pkt_addr6_t {
-    return get<1>(cn);
+template<typename TupleType>
+auto tuple_get_dst_addr(const TupleType& tup) -> decltype(get<1>(tup)) {
+    return get<1>(tup);
 }
 
+template<typename TupleType>
+auto tuple_get_src_port(const TupleType& tup) -> decltype(get<2>(tup)) {
+    return get<2>(tup);
+}
 
-// template<typename TupleType>
-// auto tuple_get_src_addr(const TupleType& tup) -> decltype(get<0>(tup))
-// {
-//     return get<0>(tup);
-// }
-
-// template<typename T>
-// auto tuple_get_dst_addr(const T& tup)
-// {
-//     return get<1>(tup);
-// }
+template<typename TupleType>
+auto tuple_get_dst_port(const TupleType& tup) -> decltype(get<3>(tup)) {
+    return get<3>(tup);
+}
 
 
 };
