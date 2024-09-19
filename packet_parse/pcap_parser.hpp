@@ -7,9 +7,6 @@
 #include "packet_basic.hpp"
 #include "packet_metainfo.hpp"
 
-using std::string;
-using std::shared_ptr;
-using std::make_shared;
 
 namespace Trinity
 {

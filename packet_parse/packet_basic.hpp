@@ -6,8 +6,6 @@
 #include "packet_metainfo.hpp"
 #include "pcpp_common.hpp"
 
-using std::string;
-using std::stringstream;
 
 namespace Trinity
 {

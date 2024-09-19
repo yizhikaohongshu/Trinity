@@ -5,10 +5,6 @@
 #include "../common.hpp"
 #include "pcpp_common.hpp"
 
-using std::vector;
-using std::tuple;
-using std::get;
-using std::string;
 
 namespace Trinity 
 {
@@ -71,22 +67,22 @@ inline auto get_str_addr(const pkt_addr6_t ad) -> string {
 }
 
 template<typename TupleType>
-auto tuple_get_src_addr(const TupleType& tup) -> decltype(get<0>(tup)) {
+inline auto tuple_get_src_addr(const TupleType& tup) -> decltype(get<0>(tup)) {
     return get<0>(tup);
 }
 
 template<typename TupleType>
-auto tuple_get_dst_addr(const TupleType& tup) -> decltype(get<1>(tup)) {
+inline auto tuple_get_dst_addr(const TupleType& tup) -> decltype(get<1>(tup)) {
     return get<1>(tup);
 }
 
 template<typename TupleType>
-auto tuple_get_src_port(const TupleType& tup) -> decltype(get<2>(tup)) {
+inline auto tuple_get_src_port(const TupleType& tup) -> decltype(get<2>(tup)) {
     return get<2>(tup);
 }
 
 template<typename TupleType>
-auto tuple_get_dst_port(const TupleType& tup) -> decltype(get<3>(tup)) {
+inline auto tuple_get_dst_port(const TupleType& tup) -> decltype(get<3>(tup)) {
     return get<3>(tup);
 }
 

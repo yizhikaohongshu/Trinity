@@ -14,6 +14,19 @@
 namespace Trinity 
 {
 
+using std::vector;
+using std::tuple;
+using std::get;
+using std::string;
+using std::pair;
+using std::min;
+using std::unique_ptr;
+using std::make_unique;
+using std::thread;
+using std::stringstream;
+using std::shared_ptr;
+using std::make_shared;
+
 
 };
 

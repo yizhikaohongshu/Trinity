@@ -1,11 +1,7 @@
 #include "pcap_parser.hpp"
 
 using namespace Trinity;
-using std::pair;
-using std::min;
-using std::unique_ptr;
-using std::make_unique;
-using std::thread;
+
 
 auto PcapParser::parse_raw_packet(size_t num_to_parse) -> decltype(p_raw_packet)
 {
